@@ -2,6 +2,7 @@
   "name": "quiz-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://quizapi-4g8l.onrender.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

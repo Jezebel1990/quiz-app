@@ -6,10 +6,10 @@ export enum Difficulty {
 
 
   export type Question = {
-    correctAnswer: number;
+    correctAnswer: string;
     difficulty: Difficulty;
-    options: Array<string>;
     question: string;
+    options: Array<string>;
   };
   
   export type QuestionsState = Array<Question & { answers: Array<string> }>;
