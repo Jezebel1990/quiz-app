@@ -1,5 +1,4 @@
 'use client';
-import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Difficulty } from "../types/quiz";
@@ -7,13 +6,16 @@ import { Difficulty } from "../types/quiz";
 import Button from "../components/Button/Button";
 
 import HomepageImage from '../assets/home-pic.gif';
+import { useDifficulty } from "../context/DifficultyContext";
 
 const Home = () => {
   
   const router = useRouter();
-  const [difficulty, setDifficulty] = useState<Difficulty>(Difficulty.EASY);
+  const {difficulty, setDifficulty} = useDifficulty()
 
-  const handleButtonClick = () => router.push('/quiz');
+  const handleButtonClick = () => {
+    router.push('/quiz');
+  }
 
   return (
     <div className='text-center'>

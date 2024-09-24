@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Quicksand } from 'next/font/google';
 import Logo from '../assets/logo.svg';
 import { DifficultyProvider } from "../context/DifficultyContext";
+
 import "./globals.css";
 
 const quicksand = Quicksand({

@@ -75,4 +75,3 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
 };
 
 export default Quiz;
-

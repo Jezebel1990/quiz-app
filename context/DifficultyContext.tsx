@@ -1,29 +1,19 @@
-'use client'; 
+"use client";
 
-import { createContext, useState, ReactNode, useContext } from 'react';
-import { Difficulty } from '../types/quiz';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type DifficultyContextType = {
-  difficulty: Difficulty;
-  setDifficulty: (difficulty: Difficulty) => void;
-};
-
-const DifficultyContext = createContext<DifficultyContextType | undefined>(undefined);
+const DifficultyContext = createContext<any>(null);
 
 export const DifficultyProvider = ({ children }: { children: ReactNode }) => {
-  const [difficulty, setDifficulty] = useState<Difficulty>(Difficulty.EASY);
+    const [difficulty, setDifficulty] = useState('easy'); // valor padrão
 
-  return (
-    <DifficultyContext.Provider value={{ difficulty, setDifficulty }}>
-      {children}
-    </DifficultyContext.Provider>
-  );
+    return (
+        <DifficultyContext.Provider value={{ difficulty, setDifficulty }}>
+            {children}
+        </DifficultyContext.Provider>
+    );
 };
 
 export const useDifficulty = () => {
-  const context = useContext(DifficultyContext);
-  if (!context) {
-    throw new Error('useDifficulty deve ser usado dentro de DifficultyProvider');
-  }
-  return context;
+    return useContext(DifficultyContext);
 };
