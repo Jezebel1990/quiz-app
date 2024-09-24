@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div className='text-center'>
-     <p className='text-[#020288]  p-4'>Você tem o que é preciso para se tornar o mestre do Quiz?</p>
+     <p className='text-[#020288] font-bold p-4'>Você tem o que é preciso para se tornar o mestre do Quiz?</p>
 
      <label htmlFor="difficulty">Escolha a dificuldade:</label>
             <select

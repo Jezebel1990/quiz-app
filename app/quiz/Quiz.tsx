@@ -44,6 +44,11 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         setCurrentQuestionIndex(newQuestionIndex);
     }
     const currentQuestion = questions[currentQuestionIndex];
+
+    const handleFinish = () => {
+        localStorage.setItem('quizScore', score.toString()); 
+        router.push('/result'); 
+    };
     
     return (
     <div className='text-black text-center'>
@@ -66,7 +71,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         onClick={() => handleChangeQuestion(-1)} />
         <Button
          text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
-         onClick={currentQuestionIndex === totalQuestions - 1 ? () => router.push('/') : () => handleChangeQuestion(1)}
+         onClick={currentQuestionIndex === totalQuestions - 1 ? handleFinish : () => handleChangeQuestion(1)}
          />
 
     </div>
