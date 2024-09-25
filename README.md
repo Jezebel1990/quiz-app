@@ -1,6 +1,6 @@
 # Quiz App
 
-![Quiz App](https://github.com/user-attachments/assets/6f55886e-73da-45f1-98f5-a3b55d6cb371)
+https://github.com/user-attachments/assets/6f55886e-73da-45f1-98f5-a3b55d6cb371
 
 > Um aplicativo de quiz interativo desenvolvido com Next.js, Express e Tailwind CSS.
 
