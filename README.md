@@ -12,7 +12,7 @@ Este projeto é um aplicativo de quiz onde os usuários podem escolher o nível 
 - Exibição de pontuação em tempo real
 - Feedback após cada resposta
 - Resultado final com pontuação e desempenho
-- ![Backend API com perguntas de quiz](https://github.com/Jezebel1990/quiz-api.git) 
+- [Backend API com perguntas de quiz](https://github.com/Jezebel1990/quiz-api.git) 
 - Interface de usuário simples e responsiva com **Tailwind CSS**
 
 ## Tecnologias Utilizadas
